@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VISION TECHNICAL SOLUTIONS - Securing Your Values</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="vision technical, cctv, IT, fire alarm, access control, moi ssd certified, qatar" name="keywords">
+    <meta
+        content="Premier ELV integrator in Qatar and licensed CCTV system integrator by ministry of interior (Security system Department) dedicated to providing comprehensive video surveillance solutions for businesses and organizations. We are experts at designing, implementing, and maintaining CCTV systems as well as providing MOI-SSD certification for required customers as per the norms by Qatar's Ministry of Interior."
+        name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .btn-primary {
+            background-color: #105faa;
+            border: 1px solid #105faa;
+        }
+
+        .bg-primary {
+            background-color: #105faa !important;
+        }
+
+        .btn-primary:hover {
+            background-color: #286aa8;
+        }
+
+        .text-primary {
+            color: #105faa !important;
+        }
+
+        nav {
+            height: 100px;
+        }
+
+        .active {
+            /* background-color: #105faa !important; */
+            color: #105faa !important;
+            font-weight: 500;
+            /* border-bottom: 5px solid #105faa; */
+        }
+
+        .container-fluid.bg-primary.fixed-top {
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Adjust the background color and opacity as needed */
+            z-index: 1000;
+            /* Adjust the z-index as needed */
+        }
+
+
+
+        @media only screen and (max-width: 770px) {
+            .logo {
+                max-width: 50vw;
+            }
+
+            nav {
+                height: auto;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .logo {
+                max-width: 65vw;
+            }
+
+            nav {
+                height: auto;
+            }
+
+            .img-float {
+                width: 230px;
+            }
+        }
+
+        @media only screen and (max-width: 350px) {
+            .logo {
+                max-width: 60vw;
+            }
+
+            nav {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <div class="modal" id="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">MOI-SSD</h5>
+                    <button type="button" onclick="hideModal()" class="btn btn-primary-outline" data-dismiss="modal"
+                        aria-label="Close">
+                        <span aria-hidden="true" style="color: #000000;">X</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="./img/APPROVED CERTIFICATE.png" width="100%" alt="" srcset="">
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-contact" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thank you</h5>
+                    <button type="button" onclick="hideModal()" class="btn btn-primary-outline" data-dismiss="modal"
+                        aria-label="Close">
+                        <span aria-hidden="true" style="color: #000000;">X</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                   <p>Thank you for contacting us. We will get back to you shortly.</p>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-primary fixed-top">
+        <div class="row gx-4 d-none d-lg-flex">
+            <div class="col-lg-6 text-start">
+                <div class="h-100 d-inline-flex align-items-center">
+                    <div class="btn-sm-square rounded-circle bg-primary me-2">
+                        <small class="fa fa-map-marker-alt text-white"></small>
+                    </div>
+                    <a href="https://maps.app.goo.gl/qAwX75LeM8RbQV9CA">
+                        <small style="color: white;">OFFICE NO. 10-G-16, COMMERCIAL SOUQ AL HARAJ,
+                            NEAR BARWA VILLAGE- DOHA-QATAR
+                        </small></a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <div class="btn-sm-square rounded-circle bg-primary me-2">
+                        <small class="fa fa-envelope-open text-white"></small>
+                    </div>
+                    <a href="mailto:info@visionqatar.net">
+                        <small style="color:white;">Email: info@visionqatar.net</small>
+                    </a>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <div class="btn-sm-square rounded-circle bg-primary me-2">
+                        <small class="fa fa-phone-alt text-white"></small>
+                    </div>
+                    <small style="color: white;cursor: pointer;"><span
+                            onclick="smessage('CCTV Fitting')">+97477955200</span> | <span
+                            onclick="smessage('CCTV Fitting', '+97477882757')">+97477882757</span></small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5" style=" z-index: 999;">
+        <div class="container-fluid bg-primary d-flex d-sm-none" style="width: 100%">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="h-100 d-inline-flex align-items-center">
+                        <div class="btn-sm-square rounded-circle bg-primary">
+                            <small class="fa fa-phone-alt text-white"></small>
+                        </div>
+                        <small onclick="smessage('CCTV Fitting')" style="color: white; font-size: 11.5px;">+974 7795
+                            5200</small>
+                    </div>
+                    <div class="h-100 d-inline-flex align-items-center">
+                        <div class="btn-sm-square rounded-circle bg-primary">
+                            <small class="fa fa-envelope-open text-white"></small>
+                        </div>
+                        <a href="mailto:info@visionqatar.net">
+                            <small style="color:white;">info@visionqatar.net</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-0 pt-0" style="margin-top: 0px;padding-top: 0px;">
+                <div style="color: white; font-size: 8.3px;">
+                    OFFICE NO. 10-G-16, COMMERCIAL SOUQ AL HARAJ, NEAR BARWA VILLAGE- DOHA-QATAR
+                </div>
+            </div>
+        </div>
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <img class="logo" src="img/logo2.svg" alt="SCP" width="420">
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-4 py-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="./img/Vision Tech resized.pdf" target="_blank" class="nav-item nav-link">Profile</a>
+            </div>
+            <div class="h-100 d-lg-inline-flex align-items-center d-none">
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2"
+                    href="https://www.facebook.com/profile.php?id=100070154611634"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="#"><i
+                        class="fab fa-twitter"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="#"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-0" href="#"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <a class="float" onclick="smessage('Need a service/assistance')">
+        <div class="d-flex"><i style="font-size: 40px; margin-top: 5px;margin-left:25px"
+                class="fa-brands fa-whatsapp"></i></div>
+    </a>
+
+    <a class="float-logo">
+        <div class="d-flex">
+            <img class="img-float" src="./img/approved-moissd.png" onclick="launchModal()" width="350px" alt=""
+                srcset="">
+        </div>
+    </a>
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/approved7.png" alt="">
+                <div class="carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Surveillance Systems</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Enhance security with cutting-edge Surveillance
+                                    Systems. Our advanced technology ensures real-time monitoring and protection for
+                                    your business, assets, and peace of mind.</p>
+                                <a href="Videosurveillance.html"
+                                    class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft">Explore
+                                    Solutions</a>
+                                <a href="#quote"
+                                    class="btn btn-light rounded-pill py-md-3 px-md-5 animated slideInRight">Free
+                                    Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/gatebarriers.png" alt="">
+                <div class="carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Access Control Solutions</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Elevate security with our Access Control System.
+                                    Safeguard your premises with state-of-the-art solutions for managing and regulating
+                                    entry, ensuring safety and peace of mind.</p>
+                                <a href="Accesscontrol.html"
+                                    class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft">Explore
+                                    Solutions</a>
+                                <a href="#quote"
+                                    class="btn btn-light rounded-pill py-md-3 px-md-5 animated slideInRight">Free
+                                    Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/approved (14).png" alt="">
+                <div class="carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Fire Alarm Solutions
+                                </h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Safeguard your property with Fire
+                                    Mitigation Systems. Our advanced technology and expertise protect against wildfires,
+                                    offering peace of mind and preserving your valuable assets.</p>
+                                <a href="fire.html"
+                                    class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft">Explore
+                                    Solution</a>
+                                <a href="#quote"
+                                    class="btn btn-light rounded-pill py-md-3 px-md-5 animated slideInRight">Free
+                                    Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/icon/10.png" alt="">
+                <div class="carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">IT Infrastructure Solutions
+                                </h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Unlock business potential with our IT
+                                    Infrastructure Solutions. Tailored to your needs, we optimize technology for
+                                    efficiency, reliability, and growth, ensuring your success in the digital age.</p>
+                                <a href="IT.html"
+                                    class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft">Explore
+                                    Solution</a>
+                                <a href="#quote"
+                                    class="btn btn-light rounded-pill py-md-3 px-md-5 animated slideInRight">Free
+                                    Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+    <!-- About Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container about px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-150 h-100" src="img/30.png" style="object-fit: cover;"
+                            alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 pe-lg-0">
+                        <div class="bg-primary mb-1" style="width: 60px; height: 2px;"></div>
+                        <h1 style="font-weight: bold;   color: #105faa;" display-5 mb-4">Who We Are ?</h1>
+                        <p style="color: #000000;" class="mb-4 pb-2"> <b>Vision technical solutions</b> for security
+                            equipment is a premier ELV integrator in Qatar and licensed CCTV system integrator by
+                            ministry of interior (Security system Department) dedicated to providing comprehensive video
+                            surveillance solutions for businesses and organizations. We are experts at designing,
+                            implementing,
+                            and maintaining CCTV systems as well as providing MOI-SSD certification for required
+                            customers as per
+                            the norms by Qatar's Ministry of Interior.
+                        </p>
+                        <p style="color: #000000;" class="mb-4 pb-2"> Since its inception in 2014, Vision Technical
+                            Solution has seen significant growth as a CCTV and Surveillance System provider in Qatar.
+                            Incorporating years of industry experience with careful attention to detail assures that
+                            excellence comes as standard in everything we do. Our utmost priority as an MOI – SSD
+                            approved CCTV contractor is
+                            to provide our clients with effective and cost-efficient solutions to their security
+                            requirements. Our clients include hotels, hospitals, clinics,
+                            banks, jewelry shops and factories that manufacture jewelry with MOI-SSD approval</p>
+                        <p style="color: #000000;" class="mb-4 pb-2">Our services extend to other ELV areas such as
+                            Structured cabling, Fire detection alarms, Intrusion alarms, Voice and Data networking,
+                            various kinds of Access control system such as
+                            Gate barriers, Anti-theft Gates, Magnetic locks with controller and attendance management
+                            system.
+                            We are committed to ensuring the safety, security, and satisfaction of our clients.
+                        </p>
+                        <p style="color: #000000;" class="mb-4 pb-2">Our mission is to deliver top-notch CCTV solutions
+                            that empower businesses to enhance security, monitor operations, and protect their assets.
+                            We aim to exceed client expectations through technical excellence, innovation, and
+                            unwavering dedication to quality service.
+                        </p>
+
+
+
+                        <h5 style="color: #105faa;"> Our Technical Solutions</h5>
+                        <ul class="list-unstyled">
+                            <li style="list-style: none;">
+                                <i style="color:#105faa" class="fas fa-arrow-circle-right"></i>
+                                <span style="margin-left: 10px; color: #000000;">Security and surveillance (CCTV -
+                                    MOI-SSD Licensed)
+
+                                </span>
+                            </li>
+                            <li style="list-style: none;">
+                                <i style="color:#105faa" class="fas fa-arrow-circle-right"></i>
+                                <span style="margin-left: 10px; color: #000000;">Access controls and time attendance
+
+                            </li>
+                            <li style="list-style: none;">
+                                <i style="color:#105faa" class="fas fa-arrow-circle-right"></i>
+                                <span style="margin-left: 10px; color: #000000;">Gate barriers and Anti-theft solutions
+
+                            </li>
+                            <li style="list-style: none;">
+                                <i style="color:#105faa" class="fas fa-arrow-circle-right"></i>
+                                <span style="margin-left: 10px;color: #000000;">Data and Voice infrastructure solutions
+                                </span>
+                            </li>
+
+
+                            </li>
+                            <li style="list-style: none;">
+                                <i style="color:#105faa" class="fas fa-arrow-circle-right"></i>
+                                <span style="margin-left: 10px;color: #000000;">Fire Alarm solutions
+                                </span>
+                            </li>
+
+
+
+                        </ul>
+                        <div class="row g-4 mb-4 pb-3">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="d-flex align-items-center">
+                                    <div class="ms-4">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="d-flex align-items-center">
+                                    <div class="ms-4">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="about.html" class="btn btn-primary rounded-pill py-3 px-5">Explore More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Facts Start -->
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center">
+                <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
+                <h1 style="color: #105faa;" class="display-5 mb-5">What we provide</h1>
+            </div>
+            <div class="row g-0 service-row">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon">
+                        </div>
+                        <h4 class="mb-3">Surveillance System Solutions</h4>
+                        <p class="mb-4">Discover our surveillance innovations</p>
+                        <a class="btn" href="Videosurveillance.html"><i
+                                class="fa fa-arrow-right text-white me-3"></i>Know more</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon">
+                        </div>
+                        <h4 class="mb-3">Access Control Solutions</h4>
+                        <p class="mb-4">Experience advanced entry management</p>
+                        <a class="btn" href="Accesscontrol.html"><i class="fa fa-arrow-right text-white me-3"></i>Know
+                            more</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="img/icon/icon-9.png" alt="Icon">
+                        </div>
+                        <h4 class="mb-3">Fire Alarm Systems Solutions</h4>
+                        <p class="mb-4">Navigate comprehensive fire systems</p>
+                        <a class="btn" href="fire.html"><i class="fa fa-arrow-right text-white me-3"></i>Know more</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="img/icon/icon-3.png" alt="Icon">
+                        </div>
+                        <h4 class="mb-3">IT Infrastructure Solutions</h4>
+                        <p class="mb-4">Explore our IT Infrastructure expertise</p>
+                        <a class="btn" href="IT.html"><i class="fa fa-arrow-right text-white me-3"></i>Know more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+
+    <!-- Quote Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container quote px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/quote1.png"
+                            style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 quote-text py-5 wow fadeIn" id="quote" data-wow-delay="0.5s">
+                    <div class="p-lg-5 pe-lg-0">
+                        <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
+                        <h1 style="color: #105faa;" class="display-5 mb-5">Get a Quote</h1>
+                        <form method="post" action="contact-form-worker.php">
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" name="name" class="form-control border-0" placeholder="Your Name"
+                                        style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="email" name="email" class="form-control border-0"
+                                        placeholder="Your Email" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" name="mobile" class="form-control border-0"
+                                        placeholder="Your Mobile" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select border-0" name="service" style="height: 55px;">
+                                        <option selected>Select A Service</option>
+                                        <option value="cctv">CCTV</option>
+                                        <option value="fire">Fire Alarm</option>
+                                        <option value="access">Access Control</option>
+                                        <option value="it">IT</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" class="form-control border-0"
+                                        placeholder="Message"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" name="submit" type="submit">Get A Free
+                                        Quote</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
+
+    <!-- Testimonial Start -->
+    <div class="owl-carousel">
+        <div><img src="https://1000logos.net/wp-content/uploads/2021/05/Hikvision-logo.png" alt="" srcset=""> </div>
+        <div><img src="https://logos-world.net/wp-content/uploads/2020/04/Huawei-Emblem.png" alt=""></div>
+        <div><img src="https://1000logos.net/wp-content/uploads/2022/12/Panasonic-logo.png" alt=""></div>
+        <div><img src="./img/icon1/1.svg" alt=""></div>
+        <div><img src="./img/icon1/2.svg" alt=""></div>
+        <div><img src="./img/icon1/3.svg" alt=""></div>
+        <div><img src="./img/icon1/4.svg" alt=""></div>
+        <div><img src="./img/icon1/5.svg" alt=""></div>
+        <div><img src="./img/icon1/13.svg" alt=""></div>
+        <div><img src="./img/icon1/11.svg" alt=""></div>
+        <div><img src="./img/icon1/12.svg" alt=""></div>
+        <div><img src="./img/icon1/14.png" alt=""></div>
+        <div><img src="./img/icon1/hp.svg" alt=""></div>
+        <div><img src="./img/icon1/legrand.svg" alt=""></div>
+        <div><img src="./img/icon1/sandisk.svg" alt=""></div>
+        <div><img src="./img/icon1/toshiba.svg" alt=""></div>
+        <div><img src="./img/icon1/triplite.svg" alt=""></div>
+        <div><img src="./img/icon1/unv.svg" alt=""></div>
+        <div><img src="./img/icon1/vertiv.svg" alt=""></div>
+        <div><img src="./img/icon1/wd1.svg" alt=""></div>
+        <!-- <div><img src="./img/icon1/wd1.svg" alt=""></div> -->
+        <div><img src="./img/icon1/alhua.svg" alt=""></div>
+        <div><img src="./img/icon1/14.png" alt=""></div>
+        <div><img src="./img/icon1/ap.svg" alt=""></div>
+        <div><img src="./img/icon1/netx.svg" alt=""></div>
+
+    </div>
+
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-secondary footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Contact Us</h5>
+                    <a href="https://maps.app.goo.gl/qAwX75LeM8RbQV9CA" style="color: #9B9B9B;">
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>OFFICE NO. 10-G-16, COMMERCIAL SOUQ AL
+                            HARAJ,
+                            NEAR BARWA VILLAGE- DOHA-QATAR</p>
+                    </a>
+                    <p class="mb-2" style="cursor: pointer;" onclick="smessage('CCTV Fitting')"><i
+                            class="fa fa-phone-alt me-3"></i>Mobile : +974 7795 5200 </p>
+                    <p class="mb-2" style="cursor: pointer;" onclick="smessage('CCTV Fitting', '+97477882757')"><i
+                            class="fa fa-phone-alt me-3"></i>+974 77882757</p>
+                    <a href="mailto:info@visionqatar.net" style="color: #9B9B9B;">
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Email: info@visionqatar.net </p>
+                    </a>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2"
+                            href="https://www.facebook.com/profile.php?id=100070154611634"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Services</h5>
+                    <a class="btn btn-link" href="./Videosurveillance.html">Surveillance System Solutions</a>
+                    <a class="btn btn-link" href="./Accesscontrol.html">Access Control Barriers</a>
+                    <a class="btn btn-link" href="./fire.html">Fire Alarm Solutions</a>
+                    <a class="btn btn-link" href="./IT.html">IT Infrastructure Solutions</a>
+                    <!-- <a class="btn btn-link" href="">Smart Home</a> -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="index.html">Home</a>
+                    <a class="btn btn-link" href="about.html">about</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        <!-- Copyright Start -->
+        <div class="container-fluid py-4" style="background: #000000;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; 2023 <b>Vision Technical Solutions</b>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Powered by <a href="https:/fololix.com">Fololix</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+        <style>
+            .float {
+                position: fixed;
+                width: 80px;
+                height: 50px;
+                bottom: 55px;
+                right: 40px;
+                background-color: #25d366;
+                color: #FFF;
+                border-radius: 50px;
+                text-align: center;
+                font-size: 30px;
+                box-shadow: 2px 2px 1px #bfffd8;
+                cursor: pointer;
+                z-index: 100;
+            }
+
+            .float-logo {
+                position: fixed;
+                bottom: 0px;
+                right: 130px;
+                color: #FFF;
+                border-radius: 50px;
+                text-align: center;
+                font-size: 30px;
+                cursor: pointer;
+                z-index: 100;
+            }
+
+            @media only screen and (max-width: 600px) {
+                .float {
+                    bottom: 40px;
+                }
+            }
+        </style>
+
+
+
+        <!-- Back to Top -->
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        <script>
+            $(document).ready(function () {
+                // console.log(getUrlVars())
+
+                let params = getUrlVars()
+                if (params.message) {
+                    alert("Thank you for contacting us! We will get back to you shortly.")
+                    // $('#modal-contact').modal('show');
+                }
+
+                let uri = window.location.toString();
+                if (uri.indexOf("?") > 0) {
+                    let clean_uri = uri.substring(0, uri.indexOf("?"));
+                    window.history.replaceState({}, document.title, clean_uri);
+
+                }
+
+                $(".owl-carousel").owlCarousel({
+                    loop: true,
+                    autoplay: true,
+                    autoplayTimeout: 2500,
+                    margin: 50,
+                    nav: false,
+                    dots: true,
+                    responsive: {
+                        0: {
+                            items: 2
+                        },
+                        600: {
+                            items: 4
+                        },
+                        1000: {
+                            items: 6
+                        }
+                    }
+                });
+            });
+
+            function getUrlVars() {
+                var vars = [], hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                for (var i = 0; i < hashes.length; i++) {
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            }
+
+            function smessage(id, number = '97477955200') {
+
+                let message = 'Enquiry regarding service; ' + id;
+                console.log(encodeURI(message))
+                window.open('https://wa.me/' + number + '/?text=' + encodeURI(message));
+
+            }
+
+            function launchModal() {
+                $('#modal').modal('show');
+            }
+            function hideModal() {
+                $('#modal').modal('hide');
+            }
+        </script>
+</body>
+
+</html>
